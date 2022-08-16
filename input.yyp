@@ -19,6 +19,7 @@
     {"id":{"name":"__input_class_vibration_adsr","path":"scripts/__input_class_vibration_adsr/__input_class_vibration_adsr.yy",},"order":14,},
     {"id":{"name":"input_multiplayer_params_set","path":"scripts/input_multiplayer_params_set/input_multiplayer_params_set.yy",},"order":16,},
     {"id":{"name":"obj_test_invalid_bindings","path":"objects/obj_test_invalid_bindings/obj_test_invalid_bindings.yy",},"order":13,},
+    {"id":{"name":"__input_gamepad_keyword_config_set","path":"scripts/__input_gamepad_keyword_config_set/__input_gamepad_keyword_config_set.yy",},"order":32,},
     {"id":{"name":"obj_example_rebinding_player","path":"objects/obj_example_rebinding_player/obj_example_rebinding_player.yy",},"order":2,},
     {"id":{"name":"spr_white","path":"sprites/spr_white/spr_white.yy",},"order":0,},
     {"id":{"name":"input_accessibility_global_toggle_get","path":"scripts/input_accessibility_global_toggle_get/input_accessibility_global_toggle_get.yy",},"order":1,},
