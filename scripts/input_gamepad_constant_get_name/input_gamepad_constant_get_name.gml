@@ -33,7 +33,7 @@ function input_gamepad_constant_get_name(_gm_constant)
         case gp_paddle2:   return "gp_paddle2";   break;
         case gp_paddle3:   return "gp_paddle3";   break;
         case gp_paddle4:   return "gp_paddle4";   break;
-		
+        
         case gp_none:         return "gp_none";         break;
         case gp_button_none:  return "gp_button_none";  break;
         case gp_button_any:   return "gp_button_any";   break;

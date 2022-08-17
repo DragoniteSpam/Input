@@ -20,7 +20,7 @@ function input_gamepad_get_map(_index)
             //If we have no mapping then guess at what's available
             //This should only happen when we can't find an SDL map for the gamepad and we're not using a hard-coded map (e.g. for console)
             var _array = [];
-			return array_copy(_array, 0, global.__input_gamepad_all, 0, array_length(global.__input_gamepad_all));
+            return array_copy(_array, 0, global.__input_gamepad_all, 0, array_length(global.__input_gamepad_all));
         }
         
         //Otherwise build an array to return based on the mapping in use
