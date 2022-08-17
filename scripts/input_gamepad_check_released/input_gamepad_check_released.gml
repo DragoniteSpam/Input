@@ -13,7 +13,7 @@ function input_gamepad_check_released(_index, _gm)
     }
     
     var _gamepad = global.__input_gamepads[_index];
-    if (!is_struct(_gamepad)) return false;   
+    if (!is_struct(_gamepad)) return false;
     
     if not ((_gm >= gp_none) && (_gm <= gp_any))
     {
