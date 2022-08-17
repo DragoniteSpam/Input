@@ -28,7 +28,7 @@ function input_gamepad_check_pressed(_index, _gm)
 		{
 			var _raw = global.__input_gamepad_all[@ _i];
 			
-			if (_gamepad.get_pressed(_raw))	
+			if (_gamepad.get_pressed(_raw))
 			{
 				if (_gamepad.is_axis(_raw))
 				{
