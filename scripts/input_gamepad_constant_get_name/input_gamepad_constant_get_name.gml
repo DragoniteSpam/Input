@@ -34,6 +34,10 @@ function input_gamepad_constant_get_name(_gm_constant)
         case gp_paddle3:   return "gp_paddle3";   break;
         case gp_paddle4:   return "gp_paddle4";   break;
         
+        case gp_gyro_pitch: return "gp_gyro_pitch";  break;
+        case gp_gyro_yaw:   return "gp_gyro_yaw";    break;
+        case gp_gyro_roll:  return "gp_gyro_roll";   break;
+        
         default: return "unknown"; break;
     }
 }

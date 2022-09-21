@@ -5,7 +5,7 @@ function __input_gamepad_set_mapping()
     #region Console
     
     //Switch requires some extra setup
-    if (os_type == os_switch)
+    if (__INPUT_ON_SWITCH)
     {
         //Disallow dpad input from single Joy-Cons. This happens when moving the thumbstick around in horizontal mode
         if ((raw_type != "SwitchJoyConLeft") && (raw_type != "SwitchJoyConRight"))

@@ -101,11 +101,15 @@ input_icons("xbox one")
 .add("gamepad thumbstick r down",  "thumbstick r down")
 .add("gamepad thumbstick r click", "thumbstick r click")
 
+//Not available on the Xbox One console itself but available on other platforms
+.add("gamepad guide",              "guide")
+
 //These are used for Elite controllers only
 .add("gamepad paddle 1",           "P1")
 .add("gamepad paddle 2",           "P3")  //Thanks SDL
 .add("gamepad paddle 3",           "P2")  //Many thanks
 .add("gamepad paddle 4",           "P4")
+
 
 //PlayStation 5
 input_icons("ps5")
@@ -139,6 +143,7 @@ input_icons("ps5")
 .add("gamepad touchpad click", "touchpad click")
 
 //Not available on the PlayStation 5 console itself but available on other platforms
+.add("gamepad guide",          "guide")
 .add("gamepad misc 1",         "mic")
 
 //Switch handheld/dual JoyCon/Pro Controller
@@ -169,7 +174,7 @@ input_icons("switch")
 .add("gamepad thumbstick r up",    "thumbstick r up")
 .add("gamepad thumbstick r down",  "thumbstick r down")
 .add("gamepad thumbstick r click", "thumbstick r click")
-  
+
 //Not available on the Switch console itself but available on other platforms
 .add("gamepad guide",              "home")
 .add("gamepad misc 1",             "capture")
@@ -243,6 +248,8 @@ input_icons("xbox 360")
 .add("gamepad thumbstick r down",  "thumbstick r down")
 .add("gamepad thumbstick r click", "thumbstick r click")
 
+.add("gamepad guide",              "guide")
+
 //PlayStation 4
 input_icons("ps4")
 .add("gamepad face south",         "cross")
@@ -272,7 +279,10 @@ input_icons("ps4")
 .add("gamepad thumbstick r down",  "thumbstick r down")
 .add("gamepad thumbstick r click", "R3")
 
-.add("gamepad touchpad click", "touchpad click")
+.add("gamepad touchpad click",     "touchpad click")
+
+//Not available on the PlayStation 4 console itself but available on other platforms
+.add("gamepad guide",              "guide")
 
 //PlayStation 1-3
 input_icons("psx")
@@ -302,6 +312,8 @@ input_icons("psx")
 .add("gamepad thumbstick r up",    "thumbstick r up")
 .add("gamepad thumbstick r down",  "thumbstick r down")
 .add("gamepad thumbstick r click", "R3")
+
+.add("gamepad guide",              "guide")
 
 //Nintendo Gamecube
 input_icons("gamecube")

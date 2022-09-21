@@ -223,7 +223,7 @@ function __input_class_binding() constructor
         }
         else
         {
-            if ((os_type == os_switch) || (os_type == os_linux) || (os_type == os_macosx))
+            if (__INPUT_ON_SWITCH || (os_type == os_linux) || (os_type == os_macosx))
             {
                 //Fix F11 and F12 constants
                 if      (_key == vk_f11)  _key = 128;

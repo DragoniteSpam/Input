@@ -391,7 +391,7 @@ function __input_system_tick()
             {
                 if (gamepad_is_connected(_g))
                 {
-                    if (os_type == os_switch)
+                    if (__INPUT_ON_SWITCH)
                     {
                         //When L+R assignment is used to pair two gamepads we won't see a normal disconnection/reconnection
                         //Instead we have to check for changes in the description to see if state has changed

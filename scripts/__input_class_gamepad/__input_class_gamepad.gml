@@ -134,8 +134,9 @@ function __input_class_gamepad(_index) constructor
                 return (xinput || __INPUT_ON_XBOX || __INPUT_ON_PS || (__INPUT_ON_APPLE && __INPUT_ON_MOBILE));
             }
             
-            //Otherwise return true only for the thumbsticks
-            return ((_gm == gp_axislh) || (_gm == gp_axislv) || (_gm == gp_axisrh) || (_gm == gp_axisrv));
+            //Otherwise return true only for the thumbsticks and motion unit
+            return ((_gm == gp_axislh)     || (_gm == gp_axislv)   || (_gm == gp_axisrh)   || (_gm == gp_axisrv)
+                 || (_gm == gp_gyro_pitch) || (_gm == gp_gyro_yaw) || (_gm == gp_gyro_roll));
         }
         
         var _mapping = mapping_gm_to_raw[$ _gm];
@@ -211,7 +212,7 @@ function __input_class_gamepad(_index) constructor
         {
             if (__vibration_received_this_frame && input_window_has_focus())
             {
-                if (os_type == os_switch)
+                if (__INPUT_ON_SWITCH)
                 {
                     var _lowStrength  = INPUT_VIBRATION_SWITCH_OS_STRENGTH*__vibration_left;
                     var _highStrength = INPUT_VIBRATION_SWITCH_OS_STRENGTH*__vibration_right;

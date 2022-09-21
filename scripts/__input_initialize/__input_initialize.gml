@@ -98,7 +98,7 @@ function __input_initialize()
     global.__input_any_gamepad_binding_defined  = false;
     
     //Disallow keyboard bindings on specified platforms unless explicitly enabled
-    global.__input_keyboard_allowed = (__INPUT_KEYBOARD_SUPPORT && ((os_type != os_android) || INPUT_ANDROID_KEYBOARD_ALLOWED) && ((os_type != os_switch) || INPUT_SWITCH_KEYBOARD_ALLOWED));
+    global.__input_keyboard_allowed = (__INPUT_KEYBOARD_SUPPORT && ((os_type != os_android) || INPUT_ANDROID_KEYBOARD_ALLOWED) && (!__INPUT_ON_SWITCH || INPUT_SWITCH_KEYBOARD_ALLOWED));
 
     //Default to disallowing mouse bindings on specified platforms unless explicitly enabled
     global.__input_mouse_allowed_on_platform = !(__INPUT_ON_PS || __INPUT_ON_XBOX || (__INPUT_TOUCH_SUPPORT && !INPUT_TOUCH_POINTER_ALLOWED));
@@ -466,7 +466,7 @@ function __input_initialize()
     __input_key_name_set(10, global.__input_key_name_dict[$ vk_enter]);
     
     //Reset F11 and F12 keycodes on certain platforms
-    if ((os_type == os_switch) || (os_type == os_linux) || (os_type == os_macosx))
+    if (__INPUT_ON_SWITCH || (os_type == os_linux) || (os_type == os_macosx))
     {
         __input_key_name_set(128, "f11");
         __input_key_name_set(129, "f12");
@@ -479,7 +479,7 @@ function __input_initialize()
     }
     
     //Numeric keys 2-7 on Switch
-    if (os_type == os_switch)
+    if (__INPUT_ON_SWITCH)
     {
         for(var _i = 2; _i <= 7; _i++) __input_key_name_set(_i, __input_key_get_name(ord(_i)));
     }
