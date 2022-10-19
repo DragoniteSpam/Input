@@ -117,11 +117,12 @@ function __input_hotswap_tick_input()
             //Test available gamepads
             var _sort_order = 1;
             _g = 0;
-        
-            if (!__INPUT_ON_WEB && ((os_type == os_windows) || (os_type == os_macosx)))
+            
+            if (!__INPUT_ON_WEB && ((os_type == os_macosx)
+            || (!global.__input_using_steamworks && (os_type == os_windows))
+            || ( global.__input_using_steamworks && (os_type == os_linux))))
             {
                 //Search last-to-first on platforms with low-index virtual controllers (Steam Input, ViGEm)
-                //We want real devices to take priority over virtual ones where possible to avoid thrashing
                 _sort_order = -1;
                 _g = _gamepad_count - 1;
             }
@@ -137,16 +138,16 @@ function __input_hotswap_tick_input()
                     ||  input_gamepad_check_pressed(_g, gp_face2)
                     ||  input_gamepad_check_pressed(_g, gp_face3)
                     ||  input_gamepad_check_pressed(_g, gp_face4)
+                    ||  input_gamepad_check_pressed(_g, gp_padu)
+                    ||  input_gamepad_check_pressed(_g, gp_padd)
+                    ||  input_gamepad_check_pressed(_g, gp_padl)
+                    ||  input_gamepad_check_pressed(_g, gp_padr)
                     ||  input_gamepad_check_pressed(_g, gp_shoulderl)
                     ||  input_gamepad_check_pressed(_g, gp_shoulderr)
                     ||  input_gamepad_check_pressed(_g, gp_start)
                     ||  input_gamepad_check_pressed(_g, gp_select)
                     ||  input_gamepad_check_pressed(_g, gp_stickl)
                     ||  input_gamepad_check_pressed(_g, gp_stickr)
-                    ||  (input_gamepad_check_pressed(_g, gp_padu) && (input_gamepad_delta(_g, gp_padu) != 0))
-                    ||  (input_gamepad_check_pressed(_g, gp_padd) && (input_gamepad_delta(_g, gp_padd) != 0))
-                    ||  (input_gamepad_check_pressed(_g, gp_padl) && (input_gamepad_delta(_g, gp_padl) != 0))
-                    ||  (input_gamepad_check_pressed(_g, gp_padr) && (input_gamepad_delta(_g, gp_padr) != 0))
                     ||  (!input_gamepad_is_axis(_g, gp_shoulderlb) && input_gamepad_check_pressed(_g, gp_shoulderlb))
                     ||  (!input_gamepad_is_axis(_g, gp_shoulderrb) && input_gamepad_check_pressed(_g, gp_shoulderrb)))
                     {
