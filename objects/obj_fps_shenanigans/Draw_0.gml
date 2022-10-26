@@ -19,7 +19,8 @@ camera_set_view_mat(camera, view_mat);
 camera_set_proj_mat(camera, proj_mat);
 camera_apply(camera);
 
-draw_sprite_tiled_ext(spr_white, 0, 0, 0, 1, 1, c_green, 1);
+var color = #004800;
+draw_rectangle_colour(0, 0, room_width, room_height, color, color, color, color, false);
 
 gpu_set_cullmode(cull_counterclockwise);
 

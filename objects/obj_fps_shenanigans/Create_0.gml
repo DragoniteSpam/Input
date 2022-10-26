@@ -78,7 +78,7 @@ var format = vertex_format_end();
 var meshes = penguin_load("examples/3dshenanigans.derg", format);
 var mesh_keys = variable_struct_get_names(meshes);
 
-var object_count = 200;
+var object_count = 400;
 self.objects = array_create(object_count);
 
 for (var i = 0; i < object_count; i++) {
