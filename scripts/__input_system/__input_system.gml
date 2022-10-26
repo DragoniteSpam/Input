@@ -32,6 +32,7 @@
 #macro __INPUT_TOUCH_SUPPORT              (__INPUT_ON_MOBILE  || __INPUT_ON_PS  || (os_type == os_switch))
 #macro __INPUT_KEYBOARD_NORMATIVE         (__INPUT_ON_DESKTOP || __INPUT_ON_WEB || (os_type == os_switch))
 #macro __INPUT_KEYBOARD_SUPPORT           (__INPUT_KEYBOARD_NORMATIVE || (os_type == os_android))
+#macro __INPUT_GAMEPAD_MOTION_SUPPORT     (__INPUT_STEAMWORKS_SUPPORT || __INPUT_ON_PS || (os_type == os_switch))
 #macro __INPUT_GAMEPAD_VIBRATION_SUPPORT  (__INPUT_ON_CONSOLE || (!__INPUT_ON_WEB && (os_type == os_windows)))
 #macro __INPUT_SDL2_SUPPORT               (!__INPUT_ON_WEB && (__INPUT_ON_DESKTOP || (os_type == os_android)))
 
@@ -140,6 +141,13 @@ enum __INPUT_MAPPING
     __SIZE
 }
 
+enum INPUT_GYRO
+{
+    AXIS_PITCH,
+    AXIS_YAW,
+    AXIS_ROLL
+}
+
 //INPUT_STATUS.DISCONNECTED *must* be zero so that array_size() initializes gamepad status to disconnected
 //See input_tick() for more details
 enum INPUT_STATUS
@@ -171,7 +179,6 @@ enum __INPUT_VERB_TYPE
     __CHORD,
     __COMBO,
 }
-
 
 
 
