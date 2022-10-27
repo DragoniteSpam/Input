@@ -89,3 +89,6 @@ for (var i = 0; i < object_count; i++) {
         scale: random_range(0.9, 1.1),
     };
 }
+
+self.last_cursor_x = undefined;
+self.last_cursor_y = undefined;
