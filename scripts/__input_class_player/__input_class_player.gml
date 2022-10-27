@@ -981,17 +981,11 @@ function __input_class_player() constructor
         }
         
         //Copy gyro data
-        if (!is_struct(_json[$ "gyro"]))
-        {
-            __input_error("Player ", __index, " profiles are corrupted");
-            return;
-        }
-        
         if (variable_struct_exists(_json, "gyro"))
         {
             if (!is_struct(_json.gyro))
             {
-                __input_error("Player ", __index, " gyro config is corrupted");
+                __input_error("Player ", __index, " gyro parameters are corrupted");
                 return;
             }
             
@@ -1002,7 +996,7 @@ function __input_class_player() constructor
         }
         else
         {
-            __input_trace("Warning! Player ", __index, " gyro config not found, using defaults");
+            __input_trace("Warning! Player ", __index, " gyro parameters not found, using defaults");
             __gyro_axis_x        = INPUT_GYRO_DEFAULT_AXIS_X;
             __gyro_axis_y        = INPUT_GYRO_DEFAULT_AXIS_Y;
             __gyro_sensitivity_x = INPUT_GYRO_DEFAULT_SENSITIVITY_X;

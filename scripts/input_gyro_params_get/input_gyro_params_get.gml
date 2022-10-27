@@ -1,3 +1,6 @@
+/// @desc    Gets whether a player may use gamepad gyro to drive the cursor
+/// @param   [playerIndex=0]
+
 function input_gyro_params_get(_player_index = 0)
 {
     __INPUT_VERIFY_PLAYER_INDEX

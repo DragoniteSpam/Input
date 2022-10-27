@@ -1,3 +1,10 @@
+/// @desc    Sets parameters for the cursor when gamepad gyro is in use
+/// @param   [gyroAxisX=undefined]
+/// @param   [gyroAxisY=undefined]
+/// @param   [gyroSensitivityX=undefined]
+/// @param   [gyroSensitivityY=undefined]
+/// @param   [playerIndex=0]
+
 function input_gryo_params_set(_gyro_axis_x = undefined, _gyro_axis_y = undefined, _gyro_sensitivity_x = undefined, _gyro_sensitivity_y = undefined, _player_index = 0)
 {
     if (_player_index == all)

@@ -32,7 +32,10 @@ function __input_class_gamepad_motion(_gamepad_index) constructor
                 switch(raw_type)
                 {
                     case "SwitchJoyConPair":
-                        _sensor = INPUT_SWITCH_JOYCON_MOTION_RIGHT_HAND;
+                        if (INPUT_SWITCH_JOYCON_MOTION_RIGHT_HAND)
+                        {
+                            _sensor = 1;
+                        }
                     break;
 
                     case "SwitchJoyConLeft":
