@@ -1,11 +1,9 @@
 
-if (self.mouse_lock && self.last_cursor_x && self.last_cursor_y) {
+if (self.mouse_lock && self.last_cursor_x != undefined && self.last_cursor_y != undefined) {
     #region regular movement
     self.look_dir -= (input_cursor_x() - self.last_cursor_x) / 5;
     self.look_pitch -= (input_cursor_y() - self.last_cursor_y) / 5;
     self.look_pitch = clamp(self.look_pitch, -85, 85);
-    
-    window_mouse_set(window_get_width() / 2, window_get_height() / 2);
     
     if (input_check_pressed("pause")) {
         game_end();
