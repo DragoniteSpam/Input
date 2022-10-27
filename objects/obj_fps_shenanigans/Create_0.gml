@@ -1,3 +1,4 @@
+// shush
 var penguin_load = function(filename, vertex_format) {
     var mesh_cache = { };
     var buffer = -1;
@@ -92,3 +93,5 @@ for (var i = 0; i < object_count; i++) {
 
 self.last_cursor_x = undefined;
 self.last_cursor_y = undefined;
+
+input_cursor_speed_set(16);
